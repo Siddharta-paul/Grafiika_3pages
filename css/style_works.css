@@ -1,4 +1,11 @@
-
+@font-face {
+  font-family: "outfitBlack";
+  src: url("/ttf/Outfit-Black.ttf");
+}
+@font-face {
+  font-family: "outfitRegular";
+  src: url("/ttf/Outfit-Regular.ttf");
+}
 
 body {
   background: #ecf1f7;
@@ -30,8 +37,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
+  font-family: outfitBlack, sans-serif;
+  font-weight: 500;
   margin: 0 0 20px 0;
   padding: 0;
 }
@@ -218,6 +225,7 @@ h6 {
   font-weight: 700;
   text-align: left;
   white-space: nowrap;
+  font-family: outfitBlack;
  
 }
 
@@ -227,6 +235,7 @@ h6 {
 #intro .intro-info span {
   color: #320065;
   text-align: left justify;
+  font-family: outfitRegular;
 }
 
 #intro .intro-info .btn-get-started,
@@ -385,7 +394,7 @@ h6 {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #fff;
+  color: #b0bac5;
   padding: 10px 20px;
   font-weight: 500;
 }
@@ -393,7 +402,7 @@ h6 {
 .mobile-nav a:hover,
 .mobile-nav .active > a,
 .mobile-nav li:hover > a {
-  color: #8dc2fa;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -505,12 +514,37 @@ h6 {
   
   /* background-image: linear-gradient(#171756, #54185E); */
   background-size: cover;
-  
+  margin-top: 100px;
+  width: 55%;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+
+
+.btn-grad {background-image: linear-gradient( #171756, #54185E)}
+.btn-grad {
+  
+   padding: 8px 26px;
+   text-align: center;
+   /* transition: 0.5s; */
+   display: inline-block;
+   color: white;
+   border-radius: 20px;
+   display: block;
+   font-family: outfitBlack;
+   margin-left:auto;
+   margin-right: auto;
+   margin-top: 100px;
+   margin-bottom: 150px;
+
+ }
+
+ 
 
 #call-to-action .cta-title {
   color: #320065;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 700;
   text-align: center;
   position: relative;
@@ -520,6 +554,8 @@ h6 {
   color: #320065;
   text-align: center;
   position: relative;
+  font-family: outfitRegular;
+  font-size: 22px;
 }
 
 #call-to-action .cta-btn {
@@ -547,6 +583,8 @@ h6 {
 
 #portfolio {
   padding: 0px 0;
+  font-family: outfitRegular;
+  text-transform: lowercase;
 }
 
 .portfolio-wrap{
