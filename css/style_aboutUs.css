@@ -1,9 +1,19 @@
-
-
+@font-face {
+  font-family: "outfitBlack";
+  src: url("../ttf/Outfit-Black.ttf");
+}
+@font-face {
+  font-family: "outfitRegular";
+  src: url("../ttf/Outfit-Regular.ttf");
+}
+@font-face {
+  font-family: "outfitBold";
+  src: url("../ttf/Outfit-Bold.ttf");
+}
 body {
   background: #ecf1f7;
   color: #444;
-  font-family: "Open Sans", sans-serif;
+  font-family: outfitRegular, sans-serif;
 }
 
 a {
@@ -26,7 +36,7 @@ p {
 
 h1,
 h2,
-h3,
+
 h4,
 h5,
 h6 {
@@ -219,8 +229,8 @@ h6 {
   text-align: left;
   white-space: nowrap;
   margin-left: 0px;
-  
-  margin-top: 40px;
+  font-family: outfitBlack;
+  margin-top: 80px;
 
 }
 
@@ -228,7 +238,8 @@ h6 {
 #intro .intro-info span {
   color: #320065;
 
-  
+  font-family: outfitRegular;
+  font-size: 20px;
   
   
   text-align: left justify;
@@ -264,10 +275,6 @@ h6 {
 
 /* Desktop Navigation */
 
-.main-nav {
-  /* Drop Down */
-  /* Deep Drop Down */
-}
 
 .main-nav,
 .main-nav * {
@@ -391,7 +398,7 @@ h6 {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: #fff;
+  color: #b0bac5;
   padding: 10px 20px;
   font-weight: 500;
 }
@@ -399,7 +406,7 @@ h6 {
 .mobile-nav a:hover,
 .mobile-nav .active > a,
 .mobile-nav li:hover > a {
-  color: #8dc2fa;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -480,14 +487,22 @@ h6 {
 --------------------------------*/
 
 .section-header h3 {
-  font-size: 36px;
+  font-size: 40px;
   color: #320065;
   text-align: center;
   font-weight: 700;
   position: relative;
-  font-family: "Montserrat", sans-serif;
+  font-family: outfitBlack;
 }
 
+.section-header h2 {
+  font-size: 70px;
+  color: #320065;
+  text-align: center;
+  font-weight: 700;
+  position: relative;
+  font-family: outfitBlack;
+}
 .section-header p {
   text-align: center;
   margin: auto;
@@ -495,7 +510,26 @@ h6 {
   padding-bottom: 60px;
   color: #320065;
   width: 50%;
+  font-family: outfitRegular;
 }
+
+.btn-grad {background-image: linear-gradient( #171756, #54185E)}
+.btn-grad {
+    font-size: 20px;
+   padding: 8px 26px;
+   text-align: center;
+   /* transition: 0.5s; */
+   display: inline-block;
+   color: white;
+   border-radius: 30px;
+   display: block;
+   font-family: outfitBlack;
+   margin-left:auto;
+   margin-right: auto;
+   margin-top: 40px;
+   margin-bottom: 80px;
+
+ }
 
 /* Section with background
 --------------------------------*/
@@ -509,6 +543,84 @@ h6 {
 
 /* why us Section
 --------------------------------*/
+.float-layout {
+  padding: 5px 5px;
+  float: left;
+  width: 100%;
+  height: auto;
+ 
+  margin: 0;
+}
+
+.card-container {
+  overflow: hidden;
+  margin-bottom: 160px;
+  margin-top: 50px;
+}
+
+.card {
+  background-color: #ecf1f7;
+  color: #320065;
+  max-height: fit-content;
+  width: 50%;
+  float: right;
+  min-height: fit-content;
+  border: hidden;
+  margin-left: 40px;
+}
+
+.card-title {
+  font-size: 65px;
+  text-align: left;
+  font-weight: bold;
+  padding-top: 20px;
+  font-family: outfitBlack;
+}
+
+.card-desc {
+  padding: 10px;
+  text-align: left, justify;
+  font-size: 18px;
+  font-family: outfitRegular;
+  padding-right: 20%;
+
+}
+
+/*add this it*/
+.card-image {
+  display: flex;
+}
+/*-------------*/
+
+div.card-image img {
+  max-width: 300px;
+  max-height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: width 2s, height 2s, transform 2s;
+}
+div.card-image img:hover{
+  /* -webkit-transform: scale(1.15);
+transform: scale(1.15); */
+transform: rotate(360deg);
+}
+
+
+/* Phone Devices Query */
+@media only screen and (max-width: 37.5em) {
+  
+  
+  /*add this it*/
+  .card-image {
+     flex-direction: column;
+  }
+  /*----------------------*/
+
+  .card {
+    width: 100%;
+    margin-top: -4px;
+  }
+}
 
 #why-us {
   padding: 60px 0;
@@ -930,6 +1042,22 @@ padding-bottom: 3rem !important; */
 }
 
 @media (max-width: 991px) {
+  #intro {
+    width: auto;
+    /* height: auto; */
+    background-size: cover;
+    
+  }
+  #intro .intro-info h2 {
+    font-size: 60px;
+    margin-top: 150px;
+  }
+  
+  #intro .intro-info span {
+    font-size: 20px;
+   text-align: left; 
+    
+  }
   #topbar {
     display: none;
   }
@@ -973,30 +1101,52 @@ padding-bottom: 3rem !important; */
 
 @media (max-width: 767px) {
   #intro {
-    height: auto;
-    padding: 80px 0 60px 0;
+    /* width: 100%; */
+    /* height: 100vh; */
+    height: 450px;
+    background-size: cover;
+    
   }
-
-  #intro .container {
-    height: auto !important;
+  #intro .intro-info h2 {
+   
+    font-size: 50px;
+    
+   
   }
-
+  
+  #intro .intro-info span {
+    
+    font-size: 15px;
+   text-align: left; 
+    
+  }
   #intro .intro-img {
     width: 80%;
   }
 
   #intro .intro-info {
-    text-align: center;
-    padding-top: 40px;
+    text-align: left;
+    padding-top: 15px;
+    margin-right: 40%;
   }
-
-  #intro .intro-info h2 {
-    font-size: 34px;
+  #intro .intro-info .btn-get-started, #intro .intro-info .btn-services {
+    margin-top: 60px;
     margin-bottom: 30px;
   }
-
+  .card-title{
+    font-size: 50px;
+    padding-top: 0px;
+  }
+  .card-desc{
+    padding: 0px;
+    
+    font-size: 17px;
+  }
   .section-header p {
     width: 100%;
+    font-family: outfitRegular;
+    font-size: 22px;
+    
   }
 
   #testimonials .testimonial-item {
@@ -1014,7 +1164,22 @@ padding-bottom: 3rem !important; */
     margin-left: 0;
   }
 }
-
+@media (max-width: 601px) {
+  .card-desc{
+    margin-right: 12%;
+    
+    font-size: 17px;
+  }
+  #why-us .counters {
+    margin-top: -40px;
+  }
+  #intro {
+    width: auto;
+    height: auto;
+    background-size: cover;
+    
+  }
+}
 @media (max-width: 574px) {
   #footer .footer-top .social-links a {
     margin-bottom: 25px;
@@ -1023,4 +1188,36 @@ padding-bottom: 3rem !important; */
 #arrow {
   font-size: 90px;
   font-stretch: extra-expanded;
+}
+@media (max-width: 499px) {
+  #intro {
+    width: auto;
+    height: auto;
+    background-size: cover;
+    
+  }
+  #intro .intro-info h2 {
+    margin-top: 100px;
+   
+    font-size: 30px;
+   
+   
+  }  
+  #intro .intro-info span {
+    
+    font-size: 12px;
+   text-align: left; 
+   
+    
+  }
+  #intro .intro-info{
+    line-height: normal;
+    margin-left: 20px;
+  }
+  .section-header p{
+    font-size: 15px;
+  }
+  .card-title{
+    font-size: 36px;
+  }
 }
